@@ -1,0 +1,8 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<RunSettings>
+  <RunConfiguration>
+    <EnviornmentVariables>
+      <ASPNETCORE_ENVIORNMENT>dev</ASPNETCORE_ENVIORNMENT>
+    </EnviornmentVariables>
+  </RunConfiguration>
+</RunSettings>

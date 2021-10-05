@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Microsoft.VisualStudio.SlowCheetah" Version="3.2.26">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.5" />
+
+    
+    <PackageReference Include="SpecRun.SpecFlow" Version="3.9.7" />
+    
+
+    
+
+    
+
+    
+
+    
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Drivers\" />
+    <Folder Include="Hooks\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Filters\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="runsettings\local.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>local.runsettings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="integrationsettings.Debug.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>integrationsettings.json</DependentUpon>
+    </None>
+    <None Update="integrationsettings.json">
+      <TransformOnBuild>true</TransformOnBuild>
+    </None>
+    <None Update="integrationsettings.Release.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>integrationsettings.json</DependentUpon>
+    </None>
+    <None Update="runsettings\dev.runsettings">
+      <LastGenOutput>local.Designer.cs</LastGenOutput>
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
+    <None Update="runsettings\local.runsettings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>local.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
